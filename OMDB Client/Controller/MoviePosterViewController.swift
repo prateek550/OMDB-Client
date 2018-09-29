@@ -15,11 +15,13 @@ class MoviePosterViewController: UICollectionViewController {
     private let SEARCH_KEYWORD = "Batman"
     private let MOVIE_CELL_IDENTIFIER = "moviePosterCell"
     private let LOADING_FOOTER_IDENTIFIER = "loadingFooter"
-    private let CELLS_PER_LINE: Int = 2
     private var currentPage = 1
     private var totalResults = 1
     private var movies = [Movie]()
     
+    private var CELLS_PER_LINE: Int {
+        return (UIDevice.current.orientation.isPortrait ? 2 : 3)
+    }
     private var intrimSpacing: CGFloat{
         return 5
     }
