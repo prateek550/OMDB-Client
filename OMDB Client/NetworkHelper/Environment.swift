@@ -62,7 +62,7 @@ enum Environment{
         let key = "?apikey="
         switch self {
         case .DEVELOPMENT:
-            return key.appending("eeefc96f")
+            return key.appending("YOUR_API_KEY")
         case .UNKNOWN:
             fatalError("Please check the environment in plist.")
         }
